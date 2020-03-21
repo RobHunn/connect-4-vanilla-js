@@ -1,0 +1,319 @@
+/* game board table */
+
+body {
+  background: linear-gradient(132deg, #ec5218, #1665c1);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 23s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+#game{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width:600px;
+  height: 550px;
+  transform: translate(-50%);
+  display: none;
+}
+#board td {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 0%;
+  margin: 0%;
+  overflow: hidden;
+}
+
+#board {
+background:linear-gradient(132deg, #ec5218, #1665c1);
+height: 100%;
+width: 100%;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Player 1 and 2 colors */
+.p1{
+  background-color: red;
+}
+.p2{
+  background-color: blue;
+}
+
+/* modal*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-image: url('../images/fire.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  box-shadow: 10px 10px 10px rgb(43, 42, 42);
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 25px;
+}
+
+.modal-content-loser {
+  background-image: url('../images/loser.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width:780px;
+  height: 300px;
+  margin: auto;
+  border: 1px solid #888;
+  box-shadow: 10px 10px 10px rgb(43, 42, 42);
+  text-align: center;
+  color: rgb(245, 11, 11);
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 25px;
+}
+
+/*  resset btn  */
+#playAgain{
+  padding: 7px;
+  border-radius: 30px;
+  font-size: 18px;
+  background-color: whitesmoke;
+}
+
+#playAgain:hover{
+  border-radius: 30px;
+  font-size: 18px;
+  color: white;
+  background-color:  rgb(161, 159, 159);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(161, 159, 159);
+  text-decoration: none;
+  cursor: pointer;
+ 
+}
+
+
+/* column-top1 & 2 controls hover color and animation for top table row */
+
+#column-top2 td:hover {
+  background-color: blue;
+  animation-name: hoverBlue;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes hoverBlue {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+
+#column-top1 td:hover {
+  background-color: red;
+  animation-name: hoverRed;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes hoverRed {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+
+
+/*    Play 1 red animation drop          */
+
+.column0r:nth-child(1){
+  animation-name: column0;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column0 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+.column1r:nth-child(2){
+  animation-name: column1;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column1 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+.column2r:nth-child(3){
+  animation-name: column2;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column2 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+.column3r:nth-child(4){
+  animation-name: column3;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column3 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+.column4r:nth-child(5){
+  animation-name: column4;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column4 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+.column5r:nth-child(6){
+  animation-name: column5;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column5 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+.column6r:nth-child(7){
+  animation-name: column6;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column6 {
+  0%   {background-color: white;}
+  100% {background-color: red;}
+}
+
+
+/*  player 2 blue animation drop  */
+
+
+.column0b:nth-child(1){
+  animation-name: column0b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column0b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+.column1b:nth-child(2){
+  animation-name: column1b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column1b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+.column2b:nth-child(3){
+  animation-name: column2b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column2b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+.column3b:nth-child(4){
+  animation-name: column3b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column3b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+.column4b:nth-child(5){
+  animation-name: column4b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column4b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+.column5b:nth-child(6){
+  animation-name: column5b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column5b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
+
+.column6b:nth-child(7){
+  animation-name: column6b;
+  animation-duration: .1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes column6b {
+  0%   {background-color: white;}
+  100% {background-color: blue;}
+}
