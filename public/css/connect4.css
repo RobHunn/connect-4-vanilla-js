@@ -76,7 +76,7 @@ width: 100%;
   background-position: center;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid rgb(8, 8, 8);
   box-shadow: 10px 10px 10px rgb(43, 42, 42);
   width: 80%;
   text-align: center;
@@ -92,17 +92,21 @@ width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width:780px;
-  height: 300px;
+  width:790px;
+  height: 350px;
   margin: auto;
-  border: 1px solid #888;
+  border: 1px solid rgb(0, 0, 0);
   box-shadow: 10px 10px 10px rgb(43, 42, 42);
   text-align: center;
   color: rgb(245, 11, 11);
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 800;
   font-style: italic;
   border-radius: 25px;
+}
+
+#modalTxt{
+  margin-top:150px
 }
 
 /*  resset btn  */
@@ -111,13 +115,15 @@ width: 100%;
   border-radius: 30px;
   font-size: 18px;
   background-color: whitesmoke;
+  box-shadow: 5px 5px 20px rgb(187, 187, 187);
 }
 
 #playAgain:hover{
   border-radius: 30px;
   font-size: 18px;
   color: white;
-  background-color:  rgb(161, 159, 159);
+  background-color:  rgb(12, 12, 12);
+  box-shadow: 5px 5px 20px black;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
@@ -129,6 +135,7 @@ width: 100%;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 19px;
 }
 
 .close:hover,

@@ -6,16 +6,18 @@ Answer: 1
 My first though is to use a table... We could use 6 x rows and 7 x td to build the board
 or
 Go with HTML canvas, witch will be much harder because i don't know canvas but will end up being the most awesome project.
+Final Answer: 
+The code i was to follow was using the html table method so thats what i stayed with...
 
 Question: 2
 how could you represent a played-piece in the HTML board?
 Answer: 2 
-SVG would be ok, or create an canvas drawing to represent it
+SVG would be ok, or create an canvas drawing to represent it, or div with background color added
 
 Question: 3
 in the JavaScript, what would be a good structure for the in-memory game board?
 Answer: 3
-database driven or local storage for data persistance, in game data structure could be object because its so small performance wont be an issue, but for practice we will use a hashtable with map and sets
+database driven or local storage for data persistance, in game data structure could be object or array because its so small performance wont be an issue, but for practice we will use a hashtable with map and sets
 
 Question: 4
 what might the flow of the game be?

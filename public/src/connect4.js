@@ -33,7 +33,7 @@ const makeBoard = ()=> {
 
 const makeHtmlBoard = ()=> {
   const htmlBoard = document.querySelector('#board')
-  // builds top table header
+  // builds top table header row
   const top = document.createElement("tr");
   top.setAttribute("id", "column-top1");
   top.addEventListener("click", handleClick);
@@ -68,7 +68,6 @@ const findSpotForCol = (x)=> {
 
 /** placeInTable: update DOM to place piece into HTML table of board */
 const placeInTable = (y, x)=> {
-  // TODO: make a div and insert into correct table cell
   const local = document.getElementById(`${y}-${x}`);
   const div = document.createElement("div");
   div.setAttribute("class", `piece animated bounce`);
@@ -100,7 +99,7 @@ const handleClick = (evt)=> {
   board[y][x] = currPlayer;
   placeInTable(y, x);
 
-  //check for win
+  //check for win then builds string to msg
   if (checkForWin()) {
     setTimeout(() => {
       return endGame(`Player ${currPlayer === 1 ? currPlayer = 2 : currPlayer = 1} won!`);
@@ -114,7 +113,7 @@ let tie = board.every((e,i,arr)=>{
   })
 })
 if(tie){
-  msg = ``
+  msg = `DRAW`
   let x = document.querySelector('.modal-content')
   x.classList.remove('modal-content')
   x.classList.toggle('modal-content-loser')
@@ -128,6 +127,7 @@ if(tie){
   currPlayer === 1 ? currPlayer = 2 : currPlayer = 1
   }
 
+//handleHover: handles the change of color based on currPlayer 1 or 2 see connect4.css column-top2 and column-top1 for style changes to hover effects
 const handleHover = ()=>{
   let row = document.getElementById('column-top1')
   let row2 = document.getElementById('column-top2')
@@ -159,8 +159,7 @@ const checkForWin = ()=> {
     );
   }
 
-  // TODO: read and understand this code. Add comments to help you.
-
+ //dynamic loops through board based on set height and width and builds paramiters for value checking in the win function above
   for (let y = 0; y < HEIGHT; y++) {
     for (let x = 0; x < WIDTH; x++) {
       const horiz = [[y, x], [y, x + 1], [y, x + 2], [y, x + 3]];
@@ -176,7 +175,7 @@ const checkForWin = ()=> {
 }
 
 // Get the modal aka win message popup
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 //reset btn
 const handleReset = () => {
@@ -198,11 +197,11 @@ const handleReset = () => {
 }
 
 //playAgain: btn calls function above this to reset everything
-var playAgain = document.getElementById("playAgain");
+let playAgain = document.getElementById("playAgain");
 playAgain.addEventListener('click', handleReset);
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = () => {
@@ -211,7 +210,7 @@ span.onclick = () => {
 }
 
 
-// Drop game peace animations for blue/red chip based on top row click evt and current player turn.
+// animationStart: handles game peace drop animations for blue/red chip based on top row click evt and current player turn by mapping through all td elements and applying a class. See connect4.css animations at end of style page for :nth-child(1) selections to grab correct columns. then runs setTimeout to clean up and remove classes.
 const animationStart = (evt)=> {
  let row4 = document.getElementsByTagName("td");
  let row= Array.from(row4);
