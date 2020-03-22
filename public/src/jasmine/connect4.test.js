@@ -13,12 +13,7 @@ describe("makeBoard() test (with setup)", function() {
      //this only works if let WIDTH = 7; and let HEIGHT = 6 are set to thoes values;
       expect(board).not.toEqual(jasmine.arrayContaining([1,2]));
       expect(
-        board.every((e)=>{
-            return e.every((e)=>{
-                return e=== undefined
-            })
-        })
-      ).toEqual(true);
+        board.every( e => e.every( e => e === undefined ) ) ).toEqual(true);
     });
 
 });
