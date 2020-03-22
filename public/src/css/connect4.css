@@ -4,6 +4,10 @@ body {
   background: linear-gradient(132deg, #ec5218, #1665c1);
   background-size: 400% 400%;
   animation: BackgroundGradient 23s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 @keyframes BackgroundGradient {
@@ -13,12 +17,8 @@ body {
 }
 
 #game{
-  position: absolute;
-  top: 15%;
-  left: 50%;
   width:600px;
   height: 550px;
-  transform: translate(-50%);
   display: none;
 }
 #board td {
