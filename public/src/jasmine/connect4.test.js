@@ -18,7 +18,7 @@ describe("makeBoard() test (with setup)", function() {
                 return e=== undefined
             })
         })
-      ).toEqual(true;
+      ).toEqual(true);
     });
 
 });
