@@ -7,13 +7,18 @@
   <meta name="keywords" content="javascript html5 css3 board game">
   <meta name="description" content="Robert Hunnicutt web developer project">
   <meta name="author" content="Robert J Hunnicutt III">
-  <link rel="stylesheet" href="./css/connect4.css">
-  <link rel="stylesheet" href="./css/animate.css">
+
+  <!-- My css -->
+  <link rel="stylesheet" href="./src/css/connect4.css">
+  <link rel="stylesheet" href="./src/css/animate.css">
+
+  <!-- Jasmine css Uncomment for testing-->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" /> -->
   <title>Connect 4 By Rob H</title>
 </head>
 
 <body>
-
+  <!-- Game board -->
   <div id="game">
     <table id="board"></table>
   </div>
@@ -28,7 +33,18 @@
     </div>
   </div>
 
-  <script src="./src/connect4.js"></script>
+  <!-- include JS for Jasmine  Uncomment for testing... -->
+
+  <!-- <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script> -->
+
+  <!-- Jasmine Tests -->
+  <!-- <script src="./src/jasmine/connect4.test.js"></script> -->
+
+  <!-- my js -->
+  <script src="./src/js/animations.js"></script>
+  <script src="./src/js/connect4.js"></script>
 </body>
 
 </html>
